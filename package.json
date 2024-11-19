@@ -1,0 +1,40 @@
+{
+  "name": "cypress-cucumber-framework",
+  "version": "1.0.0",
+  "description": "Template for starting Cypress with Cucumber.",
+  "main": "index.js",
+  "scripts": {
+    "test:open": "cypress open --e2e --browser chrome",
+    "test:run": "cypress run --spec cypress/e2e/features/*",
+    "test:run-tags": "cypress run --env tags=@mobile",
+    "test:run-allure": "cypress run --env allure=true",
+    "allure:clear": "rm -r allure-results/ allure-report cypress/screenshots || true",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "testing",
+    "automation"
+  ],
+  "author": "cucumber",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "cypress": "^13.15.2",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.24.0",
+    "multiple-cucumber-html-reporter": "^3.8.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "resolve": "^1.22.8"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "core-js": "^3.39.0",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

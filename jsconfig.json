@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["./cypress/pages/*"]
+    },
+    "target": "ES6",                   // Set ECMAScript target version
+    "module": "commonjs",              // Use CommonJS modules for compatibility
+    "strict": true,                    // Enable strict type-checking
+    "esModuleInterop": true,           // Allow default imports from CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file name casing
+    "skipLibCheck": true               // Skip type checks for library files
+  },
+  "exclude": ["node_modules", "dist"]
+}
